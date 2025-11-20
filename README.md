@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #000; /* خلفية سودة */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-container h1 {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 16px;
+    }
+
+    .login-container input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #1a73e8;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #1666c1;
+    }
+
+    .login-container .forgot {
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    .login-container .forgot a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+
+    .login-container .forgot a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="/password" method="POST">
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Password" name="password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <div class="forgot">
+      <a href="#">Forgot Password?</a>
+    </div>
+  </div>
+</body>
+</html>
