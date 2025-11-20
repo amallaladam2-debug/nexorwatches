@@ -1,83 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="NEXOR Watches - Luxury Vantage Y2K Collection">
-<title>NEXOR Watches</title>
-<style>
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-header { background: #000; color: #fff; padding: 20px; text-align: center; }
-nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-.section { padding: 40px 20px; text-align: center; }
-.products { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-.product { background: #fff; padding: 20px; border-radius: 10px; width: 250px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-.product img { width: 100%; border-radius: 10px; }
-footer { background: #000; color: #fff; text-align: center; padding: 20px; }
-button { background: #000; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-button:hover { background: #444; }
-form input, form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #000; /* خلفية سودة */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-container h1 {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 16px;
+    }
+
+    .login-container input::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #1a73e8;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #1666c1;
+    }
+
+    .login-container .forgot {
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    .login-container .forgot a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+
+    .login-container .forgot a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-<header>
-<h1>NEXOR Watches</h1>
-<nav>
-<a href="#home">Home</a>
-<a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-
-<section class="section" id="home">
-<h2>Luxury Vantage Y2K Collection</h2>
-<p>Discover the exclusive Vantage Y2K watches under the NEXOR brand.</p>
-</section>
-
-<section class="section" id="products">
-<h2>Our Products</h2>
-<div class="products">
-  <div class="product">
-    <img src="https://via.placeholder.com/250x250.png?text=NEXOR+Vantage+Y2K+1" alt="NEXOR Vantage Y2K 1">
-    <h3>NEXOR Vantage Y2K 1</h3>
-    <p>Elegant design with top-quality materials.</p>
-    <button>Buy Now</button>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="/password" method="POST">
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Password" name="password" required />
+      <button type="submit">Log In</button>
+    </form>
+    <div class="forgot">
+      <a href="#">Forgot Password?</a>
+    </div>
   </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/250x250.png?text=NEXOR+Vantage+Y2K+2" alt="NEXOR Vantage Y2K 2">
-    <h3>NEXOR Vantage Y2K 2</h3>
-    <p>Modern look with classic comfort.</p>
-    <button>Buy Now</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/250x250.png?text=NEXOR+Vantage+Y2K+3" alt="NEXOR Vantage Y2K 3">
-    <h3>NEXOR Vantage Y2K 3</h3>
-    <p>Luxury crafted for every occasion.</p>
-    <button>Buy Now</button>
-  </div>
-</div>
-</section>
-
-<section class="section" id="about">
-<h2>About NEXOR</h2>
-<p>NEXOR is a luxury watch brand dedicated to elegance and precision. Our Vantage Y2K collection merges classic style with modern aesthetics.</p>
-</section>
-
-<section class="section" id="contact">
-<h2>Contact Us</h2>
-<p>Email: <a href="mailto:info@nexorwatches.ma">info@nexorwatches.ma</a></p>
-<p>Phone: +212 600 000 000</p>
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
-</form>
-</section>
-
-<footer>
-<p>&copy; 2025 NEXOR Watches. All Rights Reserved.</p>
-</footer>
 </body>
 </html>
+
